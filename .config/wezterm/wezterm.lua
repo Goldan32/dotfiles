@@ -11,10 +11,9 @@ return {
 			action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
 		},
 	},
-	initial_rows = 24,
+	initial_rows = 50,
 	initial_cols = 104,
 	enable_scroll_bar = true,
-	default_prog = { 'bash' },
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled",
 }
