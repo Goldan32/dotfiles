@@ -40,4 +40,11 @@
     "window.title": "${rootName}",
     "extensions.ignoreRecommendations": true,
     "cmake.configureOnOpen": false,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["-"],
+            "after": ["$"]
+        },
+    ],
 }
