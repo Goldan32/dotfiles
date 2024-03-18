@@ -47,4 +47,5 @@
             "after": ["$"]
         },
     ],
+    "keyboard.dispatch": "keyCode",
 }

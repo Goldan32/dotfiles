@@ -9,6 +9,7 @@ SAVEHIST=100000
 source ~/.zsh/scripts/plugin_utils
 load_plugin zsh-autosuggestions
 load_plugin zsh-syntax-highlighting
+source ~/.zsh/zsh-vi-mode/zsh-vi-mode.zsh
 
 # Disable underline for syntax highlights
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
