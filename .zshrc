@@ -6,8 +6,9 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 # plugins
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/scripts/plugin_utils
+load_plugin zsh-autosuggestions
+load_plugin zsh-syntax-highlighting
 
 # Disable underline for syntax highlights
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES

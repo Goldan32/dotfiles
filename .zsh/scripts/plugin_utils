@@ -1,0 +1,12 @@
+ZSH_PLUGIN_FOLDER=~/.zsh/
+
+
+load_plugin() {
+    if [ $# -ne 1 ]; then
+        echo "No plugin provided for load plugin"
+    fi
+    if [ ! -d $ZSH_PLUGIN_FOLDER/$1 ]; then
+       git clone https://github.com/zsh-users/$1.git $ZSH_PLUGIN_FOLDER/$1
+    fi
+    source $ZSH_PLUGIN_FOLDER/$1/$1.zsh
+}
