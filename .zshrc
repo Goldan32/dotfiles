@@ -18,7 +18,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # exports
 export PATH=$HOME/.cargo/bin:$PATH
-export EDITOR="nano"
+export EDITOR="vi"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
