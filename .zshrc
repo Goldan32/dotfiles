@@ -31,6 +31,8 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 
+alias ssh='ssh -A'
+
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
 fi
@@ -44,4 +46,4 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
-PROMPT='%F{blue}%T%f %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
+PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
