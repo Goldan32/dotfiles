@@ -12,13 +12,28 @@ return {
   cmd = 'Neotree',
   keys = {
     { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<leader>e', ':Neotree toggle<CR>' },
   },
   opts = {
     filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
         },
+      },
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false,
+      },
+    },
+    buffers = {
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false,
       },
     },
   },
