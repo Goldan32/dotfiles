@@ -33,6 +33,8 @@ alias la='ls -A'
 
 alias ssh='ssh -A'
 
+logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
+
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
 fi
