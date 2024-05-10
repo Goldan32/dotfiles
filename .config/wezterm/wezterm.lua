@@ -1,4 +1,4 @@
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 return {
 	font_size = 11,
@@ -6,9 +6,9 @@ return {
 	color_scheme = "Dracula",
 	keys = {
 		{
-			key = 'Insert',
-			mods = 'CTRL',
-			action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection',
+			key = "Insert",
+			mods = "CTRL",
+			action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
 		},
 	},
 	initial_rows = 50,
@@ -16,4 +16,5 @@ return {
 	enable_scroll_bar = true,
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled",
+	enable_wayland = false,
 }
