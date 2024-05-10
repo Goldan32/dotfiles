@@ -43,9 +43,9 @@ fi
 # bindkey '^I' autosuggest-accept
 
 if [ -f /.dockerenv ]; then
-    MACHINE_PROMPT='%F{red}container%f'
+    PROMPT_M='%F{red}container%f'
 else
-    MACHINE_PROMPT='%m'
+    PROMPT_M='%m'
 fi
 
 # Source local configs
@@ -59,5 +59,5 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
-PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f@${MACHINE_PROMPT} %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
+PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f@${PROMPT_M} %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
 
