@@ -31,7 +31,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 
-alias ssh='ssh -A'
+#alias ssh='ssh -A'
 
 logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
 
@@ -42,10 +42,22 @@ fi
 # keybinds
 # bindkey '^I' autosuggest-accept
 
+if [ -f /.dockerenv ]; then
+    MACHINE_PROMPT='%F{red}container%f'
+else
+    MACHINE_PROMPT='%m'
+fi
+
+# Source local configs
+if [ -f ~/.myenv ]; then
+    . ~/.myenv
+fi
+
 # Prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
-PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
+PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f@${MACHINE_PROMPT} %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
+
