@@ -10,6 +10,11 @@ return {
 			mods = "CTRL",
 			action = wezterm.action.CopyTo("ClipboardAndPrimarySelection"),
 		},
+		{
+			key = "f",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.DisableDefaultAssignment,
+		},
 	},
 	initial_rows = 50,
 	initial_cols = 104,
