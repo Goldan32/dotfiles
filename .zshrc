@@ -7,10 +7,10 @@ SAVEHIST=100000
 setopt hist_ignore_dups
 
 # plugins
-source ~/.zsh/scripts/plugin_utils
+source ~/.zsh/scripts/plugin_utils.sh
 load_plugin zsh-autosuggestions
 load_plugin zsh-syntax-highlighting
-load_plugin zsh-vi-mode jeffreytse
+load_plugin --user jeffreytse --hash 287efa19ec492b2f24bb93d1f4eaac3049743a63 --patch zsh-vi-mode
 
 # Disable underline for syntax highlights
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
