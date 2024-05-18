@@ -39,8 +39,10 @@ if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
 fi
 
-# keybinds
-# bindkey '^I' autosuggest-accept
+# Keybinds
+bindkey -M vicmd "k" history-beginning-search-backward
+bindkey -M vicmd "j" history-beginning-search-forward
+zvm_bindkey vicmd 'a'  zvm_append_eol
 
 if [ -f /.dockerenv ]; then
     PROMPT_M='%F{red}container%f'
