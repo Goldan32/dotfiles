@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# history
+# History
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt hist_ignore_dups
 
-# plugins
+# Plugins
 source ~/.zsh/scripts/plugin_utils.sh
 load_plugin zsh-autosuggestions
 load_plugin zsh-syntax-highlighting
@@ -17,27 +17,28 @@ load_plugin --user jeffreytse --hash 287efa19ec492b2f24bb93d1f4eaac3049743a63 --
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# exports
+# Exports
 export PATH=$HOME/.cargo/bin:$PATH
-export EDITOR="vi"
+export EDITOR="nvim"
+export PNPM_HOME="${HOME}/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
-# Colorize grep output (good for log files)
+# Aliases
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-# ls aliases
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
-
-#alias ssh='ssh -A'
-
-logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
-
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
 fi
+
+# Functions
+logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
