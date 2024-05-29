@@ -18,7 +18,10 @@ ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # Exports
-export PATH=$HOME/.cargo/bin:$PATH
+case ":$PATH:" in
+    *":$HOME/.cargo/bin:"*) ;;
+    *) export PATH="$HOME/.cargo/bin:$PATH" ;;
+esac
 export EDITOR="nvim"
 export PNPM_HOME="${HOME}/.local/share/pnpm"
 case ":$PATH:" in
@@ -27,6 +30,10 @@ case ":$PATH:" in
 esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+case ":$PATH:" in
+    *":$HOME/.local/bin:"*) ;;
+    *) export PATH="$HOME/.local/bin:$PATH" ;;
+esac
 
 # Aliases
 alias grep='grep --color=auto'
@@ -37,10 +44,12 @@ alias ll='ls -alF'
 alias la='ls -A'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
+    alias less="bat -p --theme Material-Darker"
 fi
 
 # Functions
 logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
+hg () { grep "$1" $HISTFILE }
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
