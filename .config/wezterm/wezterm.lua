@@ -28,6 +28,17 @@ return {
 		"sh",
 		"zsh",
 		"ssh",
+		"btop",
 	},
-	-- window_decorations = "RESIZE",
+	window_decorations = "NONE",
+	window_frame = {
+		border_left_width = "2",
+		border_right_width = "2",
+		border_bottom_height = "2",
+		border_top_height = "2",
+		border_left_color = "purple",
+		border_right_color = "purple",
+		border_bottom_color = "purple",
+		border_top_color = "purple",
+	},
 }
