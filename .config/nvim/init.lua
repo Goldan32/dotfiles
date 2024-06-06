@@ -165,6 +165,10 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    {
+      'gbprod/cutlass.nvim',
+      opts = {},
+    },
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
