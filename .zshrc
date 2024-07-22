@@ -34,7 +34,6 @@ case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
-. ${HOME}/.espup/export-esp.sh
 
 # Aliases
 alias grep='grep --color=auto'
