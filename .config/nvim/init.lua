@@ -83,6 +83,15 @@ vim.keymap.set('n', '-', '$')
 vim.keymap.set('v', '-', '$')
 vim.keymap.set('n', '<C-l>', 'w', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-h>', 'B', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-l>', 'w', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-h>', 'B', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '{', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '}', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-k>', '{', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-j>', '}', { noremap = true, silent = true })
+vim.keymap.set('n', '[t', 'gT', { noremap = true, silent = true })
+vim.keymap.set('n', ']t', 'gt', { noremap = true, silent = true })
+vim.keymap.set('n', 'tt', ':tabnew<CR>', { noremap = true, silent = true })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
