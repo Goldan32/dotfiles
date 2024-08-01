@@ -1,0 +1,3 @@
+on_force_close "detach"
+copy_on_select false
+
