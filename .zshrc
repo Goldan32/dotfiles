@@ -54,6 +54,7 @@ hg () { grep "$1" $HISTFILE }
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
 bindkey -M vicmd "j" history-beginning-search-forward
+bindkey -r "^[c"
 zvm_bindkey vicmd 'a'  zvm_append_eol
 
 if [ -f /.dockerenv ]; then
