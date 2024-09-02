@@ -50,6 +50,7 @@ fi
 # Functions
 logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
 hg () { grep "$1" $HISTFILE }
+cl () { cd $1 && ls }
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
