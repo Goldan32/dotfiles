@@ -34,6 +34,8 @@ case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
+export PYENV_ROOT="$HOME/.local/programs/pyenv"
+[[ -d "$HOME/.local/programs/pyenv" ]] && eval "$(pyenv init -)"
 
 # Aliases
 alias grep='grep --color=auto'
