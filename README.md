@@ -21,6 +21,7 @@ Fully functional neovim:
 - Install `node`: https://nodejs.org/en/download/package-manager
 - Install `pnpm`: https://pnpm.io/installation
 - `npm i -g bash-language-server`
+- `pnpm i -g pyright`
 - `sudo apt install -y unzip`
 - `cargo install stylua`
 - `sudo apt install -y shellcheck`
