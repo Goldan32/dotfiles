@@ -53,6 +53,12 @@ fi
 logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
 hg () { grep "$1" $HISTFILE }
 cl () { cd $1 && ls }
+bflash () {
+    if [ $# -ne 2 ]; then echo "bflash img_file location"; exit 1; fi
+    bmaptool create "$1" > "$1.bmap" && \
+    bmaptool copy "$1" "$2" && \
+    rm "$1.bmap"
+}
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
@@ -69,6 +75,10 @@ fi
 # Source local configs
 if [ -f ~/.myenv ]; then
     . ~/.myenv
+fi
+
+if [[ -v ZELLIJ ]]; then
+    PROMPT_M="🟩🟩🟩${PROMPT_M}🟩🟩🟩"
 fi
 
 # Prompt
