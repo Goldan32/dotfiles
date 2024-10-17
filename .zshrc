@@ -44,6 +44,7 @@ alias fgrep='fgrep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
+alias lock='gnome-screensaver-command -l'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
