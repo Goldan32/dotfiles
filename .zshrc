@@ -60,6 +60,9 @@ bflash () {
     bmaptool copy "$1" "$2" && \
     rm "$1.bmap"
 }
+ff () {
+    realpath "$(find ./ -iname $1)"
+}
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
