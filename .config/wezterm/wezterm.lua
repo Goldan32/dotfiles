@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 return {
 	font_size = 11,
@@ -14,6 +15,56 @@ return {
 			key = "f",
 			mods = "CTRL|SHIFT",
 			action = wezterm.action.DisableDefaultAssignment,
+		},
+		{
+			key = "h",
+			mods = "ALT",
+			action = act.ActivatePaneDirection("Left"),
+		},
+		{
+			key = "l",
+			mods = "ALT",
+			action = act.ActivatePaneDirection("Right"),
+		},
+		{
+			key = "k",
+			mods = "ALT",
+			action = act.ActivatePaneDirection("Up"),
+		},
+		{
+			key = "j",
+			mods = "ALT",
+			action = act.ActivatePaneDirection("Down"),
+		},
+		{
+			key = "h",
+			mods = "CTRL|SHIFT",
+			action = act.SplitPane({ direction = "Left" }),
+		},
+		{
+			key = "l",
+			mods = "CTRL|SHIFT",
+			action = act.SplitPane({ direction = "Right" }),
+		},
+		{
+			key = "k",
+			mods = "CTRL|SHIFT",
+			action = act.SplitPane({ direction = "Up" }),
+		},
+		{
+			key = "j",
+			mods = "CTRL|SHIFT",
+			action = act.SplitPane({ direction = "Down" }),
+		},
+		{
+			key = "w",
+			mods = "ALT",
+			action = act.CloseCurrentPane({ confirm = true }),
+		},
+		{
+			key = "t",
+			mods = "CTRL|SHIFT",
+			action = act.SpawnTab("CurrentPaneDomain"),
 		},
 	},
 	initial_rows = 50,
