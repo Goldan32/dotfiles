@@ -66,6 +66,26 @@ return {
 			mods = "CTRL|SHIFT",
 			action = act.SpawnTab("CurrentPaneDomain"),
 		},
+		{
+			key = "UpArrow",
+			mods = "CTRL|SHIFT",
+			action = act.AdjustPaneSize({ "Up", 3 }),
+		},
+		{
+			key = "RightArrow",
+			mods = "CTRL|SHIFT",
+			action = act.AdjustPaneSize({ "Right", 3 }),
+		},
+		{
+			key = "DownArrow",
+			mods = "CTRL|SHIFT",
+			action = act.AdjustPaneSize({ "Down", 3 }),
+		},
+		{
+			key = "LeftArrow",
+			mods = "CTRL|SHIFT",
+			action = act.AdjustPaneSize({ "Left", 3 }),
+		},
 	},
 	initial_rows = 50,
 	initial_cols = 104,
