@@ -10,7 +10,7 @@ if os.getenv("WEZTERM_EDITOR_LAYOUT") then
 
 		local right_pane = initial_pane:split({
 			direction = "Right",
-			size = 0.4,
+			size = 0.3,
 		})
 
 		local bottom_right = right_pane:split({
