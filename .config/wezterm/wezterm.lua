@@ -1,7 +1,36 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+local mux = wezterm.mux
 
-return {
+if os.getenv("WEZTERM_EDITOR_LAYOUT") then
+	wezterm.on("gui-startup", function(cmd)
+		-- Create initial window and pane
+		local tab, initial_pane, window = wezterm.mux.spawn_window(cmd or {})
+		window:gui_window():maximize()
+
+		local right_pane = initial_pane:split({
+			direction = "Right",
+			size = 0.4,
+		})
+
+		local bottom_right = right_pane:split({
+			direction = "Bottom",
+			size = 0.25,
+		})
+
+		local middle_right = right_pane:split({
+			direction = "Bottom",
+			size = 0.6,
+		})
+
+		local bottom_left = initial_pane:split({
+			direction = "Bottom",
+			size = 0.05,
+		})
+	end)
+end
+
+local config = {
 	font_size = 11,
 	font = wezterm.font("Roboto Mono"),
 	color_scheme = "Dracula",
@@ -113,3 +142,5 @@ return {
 		border_top_color = "purple",
 	},
 }
+
+return config
