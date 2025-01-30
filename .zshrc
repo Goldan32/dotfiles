@@ -45,6 +45,8 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias lock='gnome-screensaver-command -l'
+alias msub='mosquitto_sub'
+alias mpub='mosquitto_pub'
 # write `env` in front to bind to keyboard shortcut
 alias wezeditor='WEZTERM_EDITOR_LAYOUT=1 wezterm start --always-new-process'
 if command -v bat &> /dev/null; then
