@@ -67,6 +67,13 @@ bflash () {
 ff () {
     realpath "$(find ./ -iname $1)"
 }
+nvim () {
+    if [ -d "$1" ]; then
+        /usr/bin/nvim --cmd "cd $1"
+    else
+        /usr/bin/nvim
+    fi
+}
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
