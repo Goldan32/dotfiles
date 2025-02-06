@@ -67,11 +67,13 @@ bflash () {
 ff () {
     realpath "$(find ./ -iname $1)"
 }
+
 nvim () {
-    if [ -d "$1" ]; then
-        /usr/bin/nvim --cmd "cd $1"
-    elif [ "$1" == "" ];
+    if [ -z $1 ]; then
+        echo asd
         /usr/bin/nvim
+    elif [ -d "$1" ]; then
+        /usr/bin/nvim --cmd "cd $1"
     else
         /usr/bin/nvim "$1"
     fi
