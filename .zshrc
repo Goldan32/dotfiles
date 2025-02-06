@@ -70,8 +70,10 @@ ff () {
 nvim () {
     if [ -d "$1" ]; then
         /usr/bin/nvim --cmd "cd $1"
-    else
+    elif [ "$1" == "" ];
         /usr/bin/nvim
+    else
+        /usr/bin/nvim "$1"
     fi
 }
 
