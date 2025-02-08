@@ -70,7 +70,6 @@ ff () {
 
 nvim () {
     if [ -z $1 ]; then
-        echo asd
         /usr/bin/nvim
     elif [ -d "$1" ]; then
         /usr/bin/nvim --cmd "cd $1"
