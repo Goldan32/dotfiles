@@ -34,6 +34,14 @@ case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
+case ":$PATH:" in
+    *":$HOME/.elixir-install/installs/elixir/1.18.3-otp-27/bin:"*) ;;
+    *) export PATH="$HOME/.elixir-install/installs/elixir/1.18.3-otp-27/bin:$PATH" ;;
+esac
+case ":$PATH:" in
+    *":$HOME/.elixir-install/installs/otp/27.1.2/bin:"*) ;;
+    *) export PATH="$HOME/.elixir-install/installs/otp/27.1.2/bin:$PATH" ;;
+esac
 export PYENV_ROOT="$HOME/.local/programs/pyenv"
 [[ -d "$HOME/.local/programs/pyenv" ]] && eval "$(pyenv init -)"
 

@@ -3,6 +3,7 @@ return {
   shellcheck = {},
   pyright = {},
   rust_analyzer = {},
+  elixirls = {},
   ts_ls = {},
   lua_ls = {
     settings = {
