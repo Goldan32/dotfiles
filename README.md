@@ -22,6 +22,7 @@ Fully functional neovim:
 - Install `pnpm`: https://pnpm.io/installation
 - `npm i -g bash-language-server`
 - `npm i -g markdownlint-cli`
+- `npm i -g typescript typescript-language-server`
 - `pnpm i -g pyright`
 - `sudo apt install -y unzip`
 - `cargo install stylua`
