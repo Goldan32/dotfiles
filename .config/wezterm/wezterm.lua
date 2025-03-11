@@ -34,6 +34,7 @@ local config = {
 	font_size = 11,
 	font = wezterm.font("Roboto Mono"),
 	color_scheme = "Dracula",
+	tab_bar_at_bottom = true,
 	keys = {
 		{
 			key = "Insert",
