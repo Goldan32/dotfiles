@@ -31,10 +31,14 @@ if os.getenv("WEZTERM_EDITOR_LAYOUT") then
 	end)
 end
 
+local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
+my_dracula.background = "#202020"
+
 local config = {
+	color_schemes = { ["My Dracula"] = my_dracula },
 	font_size = 11,
 	font = wezterm.font("Roboto Mono"),
-	color_scheme = "Dracula",
+	color_scheme = "My Dracula",
 	tab_bar_at_bottom = true,
 	keys = {
 		{
