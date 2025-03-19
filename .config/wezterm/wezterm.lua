@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
+local my_border_color = "olive"
 
 if os.getenv("WEZTERM_EDITOR_LAYOUT") then
 	wezterm.on("gui-startup", function(cmd)
@@ -137,10 +138,10 @@ local config = {
 		border_right_width = "2",
 		border_bottom_height = "2",
 		border_top_height = "2",
-		border_left_color = "purple",
-		border_right_color = "purple",
-		border_bottom_color = "purple",
-		border_top_color = "purple",
+		border_left_color = my_border_color,
+		border_right_color = my_border_color,
+		border_bottom_color = my_border_color,
+		border_top_color = my_border_color,
 	},
 }
 
