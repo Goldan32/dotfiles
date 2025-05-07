@@ -1,7 +1,9 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
-local my_border_color = "olive"
+local my_border_color = "#101050"
+local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
+my_dracula.background = "#202020"
 
 if os.getenv("WEZTERM_EDITOR_LAYOUT") then
 	wezterm.on("gui-startup", function(cmd)
@@ -30,9 +32,6 @@ if os.getenv("WEZTERM_EDITOR_LAYOUT") then
 		})
 	end)
 end
-
-local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
-my_dracula.background = "#202020"
 
 local config = {
 	color_schemes = { ["My Dracula"] = my_dracula },
