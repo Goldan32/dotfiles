@@ -25,6 +25,9 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      svelte = { 'prettier' },
+      typescript = { 'prettier' },
+      javascript = { 'prettier' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
