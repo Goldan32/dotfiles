@@ -6,8 +6,6 @@ To create symlinks sensibly, use
 stow --no-folding .
 ```
 
-This should really be the default behavior imo.
-
 Install cargo and bat, activate bat theme
 
 ```bash
@@ -23,6 +21,7 @@ Fully functional neovim:
 - `npm i -g bash-language-server`
 - `npm i -g markdownlint-cli`
 - `npm i -g typescript typescript-language-server`
+- `npm i -g prettier`
 - `pnpm i -g pyright`
 - `sudo apt install -y unzip`
 - `cargo install stylua`
