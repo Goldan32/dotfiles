@@ -76,13 +76,14 @@ ff () {
     realpath "$(find ./ -iname $1)"
 }
 
+NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
 nvim () {
     if [ -z $1 ]; then
-        /usr/bin/nvim
+        "$NVIM_BIN"
     elif [ -d "$1" ]; then
-        /usr/bin/nvim --cmd "cd $1"
+        "${NVIM_BIN}" --cmd "cd $1"
     else
-        /usr/bin/nvim "$1"
+        "${NVIM_BIN}" "$1"
     fi
 }
 

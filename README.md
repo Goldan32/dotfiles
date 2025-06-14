@@ -14,6 +14,14 @@ cargo install bat
 bat cache --build
 ```
 
+Install neovim using `bob` (must use `bob`, `nvim`, executable points to it in `.zshrc`)
+
+```bash
+cargo install bob-nvim && \
+bob install nightly && \
+bob use nightly
+```
+
 Fully functional neovim:
 
 - Install `node`: https://nodejs.org/en/download/package-manager
