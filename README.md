@@ -30,8 +30,22 @@ Fully functional neovim:
 - `npm i -g markdownlint-cli`
 - `npm i -g typescript typescript-language-server`
 - `npm i -g prettier`
+- `npm i -g svelte`
 - `pnpm i -g pyright`
 - `sudo apt install -y unzip`
 - `cargo install stylua`
 - `sudo apt install -y shellcheck`
 
+
+Hyprland checklist:
+
+- [x] Sound settings: `pavucontrol`
+- [x] Bluetooth headset: `bluetoothctl` for connecting a bluetooth device
+- [x] Screen sharing: Works if installed via script
+- [x] Checking battery percantage: `acpi`
+- [ ] Faster key inputs on holding a key
+- [ ] A statusline on the bottom
+- [ ] Power saving modes
+- [ ] Fingerprint sensor
+- [ ] Full custom keybinds
+- [ ] Per-system configs
