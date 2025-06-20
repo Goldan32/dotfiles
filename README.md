@@ -43,6 +43,8 @@ Hyprland checklist:
 - [x] Bluetooth headset: `bluetoothctl` for connecting a bluetooth device
 - [x] Screen sharing: Works if installed via script
 - [x] Checking battery percantage: `acpi`
+- [x] Set volume: `wpctl`
+- [ ] Function keys
 - [ ] Wifi connection script with `nmcli`
 - [ ] Screen locking
 - [ ] Faster key inputs on holding a key
