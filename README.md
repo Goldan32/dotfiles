@@ -49,7 +49,7 @@ Hyprland checklist:
 - [ ] Screen locking
 - [ ] Faster key inputs on holding a key
 - [ ] A statusline on the bottom
-- [ ] Power saving modes
+- [x] Power saving modes: `powerprofilesctl`
 - [ ] Fingerprint sensor
-- [ ] Full custom keybinds
+- [x] Full custom keybinds
 - [ ] Per-system configs
