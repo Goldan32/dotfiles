@@ -39,11 +39,11 @@ Fully functional neovim:
 
 Hyprland checklist:
 
-- [x] Sound settings: `pavucontrol`
+- [x] Sound/volume settings: `pavucontrol`
 - [x] Bluetooth headset: `bluetoothctl` for connecting a bluetooth device
 - [x] Screen sharing: Works if installed via script
 - [x] Checking battery percantage: `acpi`
-- [x] Set volume: `wpctl`
+- [x] Set volume from command line: `wpctl`
 - [ ] Function keys
 - [ ] Wifi connection script with `nmcli`
 - [ ] Screen locking
