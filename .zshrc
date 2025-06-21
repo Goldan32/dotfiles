@@ -45,6 +45,12 @@ esac
 export PYENV_ROOT="$HOME/.local/programs/pyenv"
 [[ -d "$HOME/.local/programs/pyenv" ]] && eval "$(pyenv init -)"
 
+# Try to fix wayland on home-pc
+export LIBVA_DRIVER_NAME=nvidia
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export WLR_NO_HARDWARE_CURSORS=1
+
 # Aliases
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'

@@ -47,7 +47,7 @@ Hyprland checklist:
 - [ ] Function keys
 - [ ] Wifi connection script with `nmcli`
 - [ ] Screen locking
-- [ ] Faster key inputs on holding a key
+- [x] Faster key inputs on holding a key
 - [ ] A statusline on the bottom
 - [x] Power saving modes: `powerprofilesctl`
 - [ ] Fingerprint sensor
