@@ -44,12 +44,11 @@ Hyprland checklist:
 - [x] Screen sharing: Works if installed via script
 - [x] Checking battery percantage: `acpi`
 - [x] Set volume from command line: `wpctl`
-- [ ] Function keys
 - [ ] Wifi connection script with `nmcli`
 - [ ] Screen locking
 - [x] Faster key inputs on holding a key
-- [ ] A statusline on the bottom
 - [x] Power saving modes: `powerprofilesctl`
-- [ ] Fingerprint sensor
 - [x] Full custom keybinds
 - [ ] Per-system configs
+- [ ] Function keys
+- [ ] Fingerprint sensor
