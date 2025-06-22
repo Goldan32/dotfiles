@@ -45,10 +45,28 @@ Hyprland checklist:
 - [x] Checking battery percantage: `acpi`
 - [x] Set volume from command line: `wpctl`
 - [ ] Wifi connection script with `nmcli`
+  - Set of aliases/scripts (`wifi` command)
 - [ ] Screen locking
 - [x] Faster key inputs on holding a key
 - [x] Power saving modes: `powerprofilesctl`
 - [x] Full custom keybinds
 - [ ] Per-system configs
 - [ ] Function keys
+- [ ] Unify [fresh-install](https://github.com/Goldan32/fresh-install) and this repo
+  - Move this repo to a subdir of `fresh-install`
+  - Preserve history for this repo
+  - Archive `fresh install`
+  - Create script for correct `stow` usage
+    - Should also link scripts to a path dir
+    - use set -e (or something to stop exec on error)
+- [ ] Create full install script
+  - Apt packages
+  - Roboto mono
+  - Wezterm
+  - Firefox
+  - Rust/Cargo
+  - Neovim via bob
+  - bat
+  - nodejs via nvm
+  - Neovim lsp-s see above
 - [ ] Fingerprint sensor
