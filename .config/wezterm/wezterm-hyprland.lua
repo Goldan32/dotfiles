@@ -4,8 +4,18 @@ local my_border_color = "#101050"
 local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
 my_dracula.background = "#202020"
 
+-- Get hostname
+local f = io.popen("/bin/hostname")
+local hostname = f:read("*a") or ""
+f:close()
+hostname = string.gsub(hostname, "\n$", "")
+local my_wayland_enable = true
+if hostname == "pc" then
+	my_wayland_enable = false
+end
+
 local config = {
-	enable_wayland = true,
+	enable_wayland = my_wayland_enable,
 	color_schemes = { ["My Dracula"] = my_dracula },
 	font_size = 11,
 	font = wezterm.font("Roboto Mono"),

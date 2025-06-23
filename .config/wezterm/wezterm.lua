@@ -1,8 +1,18 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
-local mux = wezterm.mux
 local my_border_color = "#101050"
 local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
+
+-- Get hostname
+local f = io.popen("/bin/hostname")
+local hostname = f:read("*a") or ""
+f:close()
+hostname = string.gsub(hostname, "\n$", "")
+local my_wayland_enable = true
+if hostname == "pc" then
+	my_wayland_enable = false
+end
+
 my_dracula.background = "#202020"
 
 if os.getenv("WEZTERM_EDITOR_LAYOUT") then
@@ -126,7 +136,7 @@ local config = {
 	enable_scroll_bar = true,
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled",
-	enable_wayland = false,
+	enable_wayland = my_wayland_enable,
 	front_end = "OpenGL",
 	skip_close_confirmation_for_processes_named = {
 		"bash",
