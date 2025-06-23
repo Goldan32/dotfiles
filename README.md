@@ -3,7 +3,7 @@
 To create symlinks sensibly, use
 
 ```bash
-stow --no-folding .
+stow --no-folding --dotfiles  -t $HOME .
 ```
 
 Install cargo and bat, activate bat theme
