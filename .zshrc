@@ -58,7 +58,7 @@ alias fgrep='fgrep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
-alias lock='gnome-screensaver-command -l'
+alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
 # write `env` in front to bind to keyboard shortcut
