@@ -5,6 +5,7 @@ local my_dracula = wezterm.color.get_builtin_schemes()["Dracula"]
 my_dracula.background = "#202020"
 
 local config = {
+	enable_wayland = true,
 	color_schemes = { ["My Dracula"] = my_dracula },
 	font_size = 11,
 	font = wezterm.font("Roboto Mono"),
@@ -25,7 +26,6 @@ local config = {
 	enable_scroll_bar = true,
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled",
-	enable_wayland = false,
 	front_end = "OpenGL",
 	skip_close_confirmation_for_processes_named = {
 		"bash",
