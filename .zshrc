@@ -61,7 +61,7 @@ alias la='ls -A'
 alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
-# write `env` in front to bind to keyboard shortcut
+alias cb='wl-copy'
 alias wezeditor='WEZTERM_EDITOR_LAYOUT=1 wezterm start --always-new-process'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
