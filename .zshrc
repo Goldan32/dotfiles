@@ -28,7 +28,7 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.local/programs/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
