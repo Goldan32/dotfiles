@@ -16,8 +16,8 @@
 [core]
     editor = nvim
 [user]
-    name = Daniel Arany
-    email = 50270724+Goldan32@users.noreply.github.com
+    name = "Goldan32"
+    email = "50270724+Goldan32@users.noreply.github.com"
 [merge]
     tool = nvimdiff2
 [difftool]
