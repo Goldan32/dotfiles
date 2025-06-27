@@ -17,7 +17,7 @@ end
 local config = {
   enable_wayland = my_wayland_enable,
   color_schemes = { ['My Dracula'] = my_dracula },
-  font_size = 11,
+  font_size = 12,
   font = wezterm.font 'Roboto Mono',
   color_scheme = 'My Dracula',
   tab_bar_at_bottom = true,

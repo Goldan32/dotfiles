@@ -17,7 +17,7 @@ MONITOR_DESCRIPTION=$(hyprctl monitors | grep -i "description:" | cut -d ' ' -f 
 if echo "$MONITOR_DESCRIPTION" | grep -q "LG Electronics LG ULTRAFINE 312MANJBDX47"; then
     # Office 4K Monitor
     hyprctl keyword monitor "DP-3,3840x2160@60.00,auto-right,1.25"
-elif echo "$MONITOR_DESCRIPTION" | grep -q "YOUR_2K_MONITOR_MODEL_OR_SERIAL"; then
+elif echo "$MONITOR_DESCRIPTION" | grep -q "ASUSTek COMPUTER INC VG27A M3LMQS294636"; then
     # Home 2K Monitor
     hyprctl keyword monitor "DP-3,2560x1440,auto-right,1"
 fi
