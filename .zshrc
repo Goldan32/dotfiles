@@ -87,15 +87,21 @@ bindkey -M vicmd "j" history-beginning-search-forward
 bindkey -r "^[c"
 zvm_bindkey vicmd 'a'  zvm_append_eol
 
+# TODO: Remove this when per-system-envs is deprecated
 if [ -f /.dockerenv ]; then
     PROMPT_M='%F{red}container%f'
 else
     PROMPT_M='%m'
 fi
 
-# Source local configs
+# TODO: Remove this when per-system-envs is deprecated
 if [ -f ~/.myenv ]; then
     . ~/.myenv
+fi
+
+MACHINE_ENV="${HOME}/.zsh/machines/${(L)$(hostname)}.sh"
+if [ -f ${MACHINE_ENV} ]; then
+    . ${MACHINE_ENV}
 fi
 
 if [[ -v ZELLIJ ]]; then
