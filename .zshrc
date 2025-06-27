@@ -22,28 +22,17 @@ case ":$PATH:" in
     *":$HOME/.cargo/bin:"*) ;;
     *) export PATH="$HOME/.cargo/bin:$PATH" ;;
 esac
-export EDITOR="nvim"
-export PNPM_HOME="${HOME}/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 export NVM_DIR="$HOME/.local/programs/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
-case ":$PATH:" in
-    *":$HOME/.elixir-install/installs/elixir/1.18.3-otp-27/bin:"*) ;;
-    *) export PATH="$HOME/.elixir-install/installs/elixir/1.18.3-otp-27/bin:$PATH" ;;
-esac
-case ":$PATH:" in
-    *":$HOME/.elixir-install/installs/otp/27.1.2/bin:"*) ;;
-    *) export PATH="$HOME/.elixir-install/installs/otp/27.1.2/bin:$PATH" ;;
-esac
 export PYENV_ROOT="$HOME/.local/programs/pyenv"
 [[ -d "$HOME/.local/programs/pyenv" ]] && eval "$(pyenv init -)"
+
+# Defaults
+export EDITOR="nvim"
 
 # Try to fix wayland on home-pc
 export LIBVA_DRIVER_NAME=nvidia
@@ -62,16 +51,15 @@ alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
 alias cb='wl-copy'
-alias wezeditor='WEZTERM_EDITOR_LAYOUT=1 wezterm start --always-new-process'
+#alias wezeditor='WEZTERM_EDITOR_LAYOUT=1 wezterm start --always-new-process'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
 fi
 
 # Functions
-logssh () { ssh $1 2>&1 | tee -a ~/logs/$1.$(date '+%Y.%m.%d').log; }
-hg () { grep "$1" $HISTFILE }
-cl () { cd $1 && ls }
+logssh () { ssh $1 2>&1 | tee -a ~/.session_logs/$1.$(date '+%Y.%m.%d').log; }
+hg () { rg "$1" $HISTFILE }
 bflash () {
     if [ $# -ne 2 ]; then echo "bflash img_file location"; exit 1; fi
     bmaptool create "$1" > "$1.bmap" && \
