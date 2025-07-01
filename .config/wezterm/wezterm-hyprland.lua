@@ -1,6 +1,4 @@
 local wezterm = require 'wezterm'
-local act = wezterm.action
-local my_border_color = '#101050'
 local my_dracula = wezterm.color.get_builtin_schemes()['Dracula']
 my_dracula.background = '#202020'
 
