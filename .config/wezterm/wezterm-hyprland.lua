@@ -12,6 +12,22 @@ if hostname == 'pc' then
   my_wayland_enable = false
 end
 
+wezterm.on('update-right-status', function(window, pane)
+  -- This event fires frequently.
+  local cwd = pane:get_current_working_dir()
+  if cwd then
+    -- Define the path for the temporary state file.
+    local temp_file_path = wezterm.home_dir .. '/.cache/wezterm_cwd'
+
+    -- Open the file for writing and save the path.
+    local file = io.open(temp_file_path, 'w')
+    if file then
+      file:write(cwd.path)
+      file:close()
+    end
+  end
+end)
+
 local config = {
   enable_wayland = my_wayland_enable,
   color_schemes = { ['My Dracula'] = my_dracula },
