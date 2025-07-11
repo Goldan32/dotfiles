@@ -1,7 +1,6 @@
 [Unit]
 Description=Dunst Notification Daemon
-PartOf=graphical-session.target
-After=graphical-session.target
+After=default.target
 
 [Service]
 Type=exec
@@ -10,4 +9,4 @@ Restart=always
 RestartSec=5
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=default.target
