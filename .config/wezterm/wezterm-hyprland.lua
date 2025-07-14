@@ -57,6 +57,7 @@ local config = {
     'zsh',
     'ssh',
     'btop',
+    'nohup',
   },
   window_decorations = 'NONE',
 }
