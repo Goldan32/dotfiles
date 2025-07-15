@@ -30,6 +30,7 @@ end)
 
 local config = {
   enable_wayland = my_wayland_enable,
+  default_prog = { '/usr/bin/zsh', '-l' },
   color_schemes = { ['My Dracula'] = my_dracula },
   font_size = 11,
   font = wezterm.font 'Roboto Mono',

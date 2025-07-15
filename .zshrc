@@ -29,7 +29,12 @@ case ":$PATH:" in
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
 export PYENV_ROOT="$HOME/.local/programs/pyenv"
-[[ -d "$HOME/.local/programs/pyenv" ]] && eval "$(pyenv init -)"
+[[ -d "$HOME/.local/programs/pyenv" ]] && \
+case ":$PATH:" in
+    *":$PYENV_ROOT:"*) ;;
+    *) export PATH="$PYENV_ROOT/bin:$PATH" ;;
+esac
+eval "$(pyenv init -)"
 
 # Defaults
 export EDITOR="nvim"
