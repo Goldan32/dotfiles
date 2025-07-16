@@ -35,3 +35,5 @@
 
 [includeIf "hasconfig:remote.*.url:ssh://git@github.com/tulip/**"]
     path = ~/.config/git/user-professional
+[color]
+	ui = auto
