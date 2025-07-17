@@ -99,6 +99,11 @@ if [ -f ${MACHINE_ENV} ]; then
     . ${MACHINE_ENV}
 fi
 
+UNTRACKED_ENV="${HOME}/.zsh/local/env.sh"
+if [ -f ${UNTRACKED_ENV} ]; then
+    . ${UNTRACKED_ENV}
+fi
+
 if [[ -v ZELLIJ ]]; then
     PROMPT_M="🟩🟩🟩${PROMPT_M}🟩🟩🟩"
 fi
