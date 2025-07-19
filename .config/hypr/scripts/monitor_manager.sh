@@ -10,7 +10,7 @@ mkdir -p "$HYPR_CACHE"
 
 MONITOR_CONF_FILE="$HYPR_CACHE/monitors.conf"
 
-if [[ "$HOSTNAME" == "home-pc" ]]; then
+if [[ "$HOSTNAME" == "pc" ]]; then
     cat "$CONF_ROOT/${HOSTNAME}.conf" > "$MONITOR_CONF_FILE"
     exit 0
 fi
