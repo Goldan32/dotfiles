@@ -12,7 +12,7 @@ active_workspace_id = int(clean_shell(sh.jq(".[] | select(.focused == true).acti
                                             _in = monitors)))
 
 clients = sh.hyprctl("-j", "clients")
-window_count = int(clean_shell(sh.jq("map(select(.workspace.id == 1)) | length",
+window_count = int(clean_shell(sh.jq(f"map(select(.workspace.id == {active_workspace_id})) | length",
                                      _in = clients)))
 
 print(window_count)
