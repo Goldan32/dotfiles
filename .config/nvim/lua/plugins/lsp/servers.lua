@@ -3,7 +3,6 @@ return {
   shellcheck = {},
   pyright = {},
   rust_analyzer = {},
-  elixirls = {},
   ts_ls = {},
   clangd = {},
   svelte = {},

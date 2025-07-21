@@ -3,7 +3,7 @@ return { -- Autoformat
   lazy = false,
   keys = {
     {
-      '<leader>f',
+      '<leader>F',
       function()
         require('conform').format { async = true, lsp_fallback = true }
       end,
@@ -28,6 +28,8 @@ return { -- Autoformat
       svelte = { 'prettier' },
       typescript = { 'prettier' },
       javascript = { 'prettier' },
+      c = { 'clang_format' },
+      cpp = { 'clang_format' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
