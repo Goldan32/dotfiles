@@ -3,12 +3,13 @@
 HYPR_CACHE="${HOME}/.cache/hypr"
 mkdir -p "$HYPR_CACHE"
 
-MONITOR_CONF_FILE="$HYPR_CACHE/laptop_monitor.conf"
+STATE="$HYPR_CACHE/laptop_monitor_state"
 
-if [[ ! -s "$MONITOR_CONF_FILE" ]] || [[ ! -f "$MONITOR_CONF_FILE" ]]; then
-    echo 'monitor = eDP-1, disabled' > "$MONITOR_CONF_FILE"
+if [[ ! -f "$STATE" ]] || [[ "$(cat "$STATE")" == "1" ]]; then
+    hyprctl keyword monitor "eDP-1, disabled" && \
+        echo 0 > "$STATE"
 else
-    rm "$MONITOR_CONF_FILE"
-    touch "$MONITOR_CONF_FILE"
+    hyprctl keyword monitor "eDP-1, 1920x1200@60.00, 0x0, 1" && \
+        echo 1 > "$STATE"
 fi
 
