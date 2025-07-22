@@ -28,7 +28,7 @@ init() {
 }
 
 if [[ $# -eq 0 ]]; then
-    toggle
+    turn_on
     exit 0
 fi
 
