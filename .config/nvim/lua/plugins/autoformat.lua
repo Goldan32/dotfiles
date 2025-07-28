@@ -28,8 +28,8 @@ return { -- Autoformat
       svelte = { 'prettier' },
       typescript = { 'prettier' },
       javascript = { 'prettier' },
-      c = { 'clang_format' },
-      cpp = { 'clang_format' },
+      -- c = { 'clang_format' },
+      -- cpp = { 'clang_format' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
