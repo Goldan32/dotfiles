@@ -26,14 +26,10 @@
     tool = nvimdiff
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-
+[color]
+    ui = auto
 [includeIf "gitdir:~/work/"]
     path = ~/.config/git/user-professional
+[include]
+    path = ~/.config/git/corpo.conf
 
-[includeIf "hasconfig:remote.*.url:https://github.com/tulip/**"]
-    path = ~/.config/git/user-professional
-
-[includeIf "hasconfig:remote.*.url:ssh://git@github.com/tulip/**"]
-    path = ~/.config/git/user-professional
-[color]
-	ui = auto
