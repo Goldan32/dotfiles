@@ -56,7 +56,6 @@ alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
 alias cb='wl-copy'
-#alias wezeditor='WEZTERM_EDITOR_LAYOUT=1 wezterm start --always-new-process'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
@@ -64,16 +63,17 @@ fi
 
 # Functions
 logssh () { ssh $1 2>&1 | tee -a ~/.session_logs/$1.$(date '+%Y.%m.%d').log; }
-hg () { rg "$1" $HISTFILE }
+
+hg () { rg -N "$1" $HISTFILE }
+
 bflash () {
     if [ $# -ne 2 ]; then echo "bflash img_file location"; exit 1; fi
     bmaptool create "$1" > "$1.bmap" && \
     bmaptool copy "$1" "$2" && \
     rm "$1.bmap"
 }
-ff () {
-    realpath "$(find ./ -iname $1)"
-}
+
+ff () { realpath "$(find ./ -iname $1)" }
 
 NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
 nvim () {
@@ -85,6 +85,8 @@ nvim () {
         "${NVIM_BIN}" "$1"
     fi
 }
+
+nohup () { command nohup "$@" > /dev/null 2>&1 }
 
 # Keybinds
 bindkey -M vicmd "k" history-beginning-search-backward
