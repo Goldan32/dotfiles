@@ -56,6 +56,8 @@ alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
 alias cb='wl-copy'
+alias fd='fdfind'
+alias v='nvim'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
