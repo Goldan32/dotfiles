@@ -36,6 +36,8 @@ case ":$PATH:" in
 esac
 eval "$(pyenv init -)"
 
+eval "$(zoxide init zsh)"
+
 # Defaults
 export EDITOR="nvim"
 
