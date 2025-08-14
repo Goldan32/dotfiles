@@ -37,6 +37,7 @@ esac
 eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
+alias cd='z'
 
 # Defaults
 export EDITOR="nvim"
