@@ -133,7 +133,13 @@ return {
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-    local servers = require 'plugins.lsp.servers'
+    local servers_source = os.getenv 'LSP_SOURCE'
+    local servers
+    if servers_source == 'corpo' then
+      servers = require 'plugins.lsp.servers-corpo'
+    else
+      servers = require 'plugins.lsp.servers'
+    end
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install
     --  other tools, you can run
