@@ -5,12 +5,11 @@ return {
   opts = {
     on_colors = function(colors)
       colors.bg = '#202020'
+      colors.bg_statusline = '#202020'
+      colors.bg_sidebar = '#1a1a1a'
     end,
   },
   init = function()
-    -- Load the colorscheme here.
-    -- Like many other themes, this one has different styles, and you could load
-    -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
     vim.cmd.colorscheme 'tokyonight-night'
 
     -- You can configure highlights by doing something like:
