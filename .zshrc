@@ -32,7 +32,6 @@ case ":$PATH:" in
     *":$PYENV_ROOT:"*) ;;
     *) export PATH="$PYENV_ROOT/bin:$PATH" ;;
 esac
-eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
 alias cd='z'
@@ -40,12 +39,6 @@ alias cd='z'
 # Defaults
 export EDITOR="nvim"
 export KERNEL_VERSION="$(uname -r)"
-
-# Try to fix wayland on home-pc
-export LIBVA_DRIVER_NAME=nvidia
-export GBM_BACKEND=nvidia-drm
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export WLR_NO_HARDWARE_CURSORS=1
 
 # Aliases
 alias grep='grep --color=auto'
@@ -56,7 +49,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias lock='hyprlock'
 alias cb='wl-copy --trim-newline'
-alias fd='fdfind'
 alias v='nvim'
 alias f='fzf'
 alias gitnorm='git -c core.pager=""'
@@ -89,17 +81,6 @@ fm() {
     NNN_TMPFILE="$tmp" nnn "$@"
     [ -s "$tmp" ] && . "$tmp"
     rm -f "$tmp"
-}
-
-NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
-nvim () {
-    if [ -z $1 ]; then
-        "$NVIM_BIN"
-    elif [ -d "$1" ]; then
-        "${NVIM_BIN}" --cmd "cd $1"
-    else
-        "${NVIM_BIN}" "$1"
-    fi
 }
 
 nohup () { command nohup "$@" > /dev/null 2>&1 }
