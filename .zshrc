@@ -20,8 +20,6 @@ case ":$PATH:" in
     *":$HOME/.cargo/bin:"*) ;;
     *) export PATH="$HOME/.cargo/bin:$PATH" ;;
 esac
-export NVM_DIR="$HOME/.local/programs/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
@@ -35,6 +33,7 @@ esac
 
 eval "$(zoxide init zsh)"
 alias cd='z'
+which nodenv 2>&1 > /dev/null && eval "$(nodenv init - zsh)"
 
 # Defaults
 export EDITOR="nvim"
