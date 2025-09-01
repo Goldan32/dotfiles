@@ -34,19 +34,12 @@ case ":$PATH:" in
     *":$PYENV_ROOT:"*) ;;
     *) export PATH="$PYENV_ROOT/bin:$PATH" ;;
 esac
-eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
 alias cd='z'
 
 # Defaults
 export EDITOR="nvim"
-
-# Try to fix wayland on home-pc
-export LIBVA_DRIVER_NAME=nvidia
-export GBM_BACKEND=nvidia-drm
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export WLR_NO_HARDWARE_CURSORS=1
 
 # Aliases
 alias grep='grep --color=auto'
@@ -59,7 +52,6 @@ alias lock='hyprlock'
 alias msub='mosquitto_sub'
 alias mpub='mosquitto_pub'
 alias cb='wl-copy'
-alias fd='fdfind'
 alias v='nvim'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
@@ -80,17 +72,6 @@ bflash () {
 
 ff () { realpath "$(find ./ -iname $1)" }
 
-NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
-nvim () {
-    if [ -z $1 ]; then
-        "$NVIM_BIN"
-    elif [ -d "$1" ]; then
-        "${NVIM_BIN}" --cmd "cd $1"
-    else
-        "${NVIM_BIN}" "$1"
-    fi
-}
-
 nohup () { command nohup "$@" > /dev/null 2>&1 }
 
 # Keybinds
@@ -100,11 +81,6 @@ bindkey -r "^[c"
 zvm_bindkey vicmd 'a'  zvm_append_eol
 
 PROMPT_M='%m'
-
-MACHINE_ENV="${HOME}/.zsh/machines/${(L)$(cat /sys/class/dmi/id/product_family | cut -d ' ' -f 1)}.sh"
-if [ -f ${MACHINE_ENV} ]; then
-    . ${MACHINE_ENV}
-fi
 
 UNTRACKED_ENV="${HOME}/.zsh/local/env.sh"
 if [ -f ${UNTRACKED_ENV} ]; then
