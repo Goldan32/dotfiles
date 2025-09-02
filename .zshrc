@@ -26,12 +26,6 @@ case ":$PATH:" in
     *":$HOME/.local/bin:"*) ;;
     *) export PATH="$HOME/.local/bin:$PATH" ;;
 esac
-export PYENV_ROOT="$HOME/.local/programs/pyenv"
-[[ -d "$HOME/.local/programs/pyenv" ]] && \
-case ":$PATH:" in
-    *":$PYENV_ROOT:"*) ;;
-    *) export PATH="$PYENV_ROOT/bin:$PATH" ;;
-esac
 
 eval "$(zoxide init zsh)"
 alias cd='z'
