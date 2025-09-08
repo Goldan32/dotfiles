@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CWD_FILE="$HOME/.cache/wezterm_cwd"
-WEZTERM_BIN="$HOME/.local/bin/wezterm --config-file $HOME/.config/wezterm/wezterm-hyprland.lua"
+WEZTERM_BIN="wezterm --config-file $HOME/.config/wezterm/wezterm-hyprland.lua"
 
 # Check if the active window is WezTerm and if our state file exists.
 if [[ $(hyprctl activewindow -j | jq -r '.class') =~ "wezterm" ]] && [[ -f "$CWD_FILE" ]]; then
