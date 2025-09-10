@@ -3,7 +3,7 @@ local my_dracula = wezterm.color.get_builtin_schemes()['Dracula']
 my_dracula.background = '#202020'
 
 -- Get hostname
-local f = io.popen '/bin/hostname'
+local f = io.popen 'hostname'
 local hostname = f:read '*a' or ''
 f:close()
 hostname = string.gsub(hostname, '\n$', '')
@@ -30,7 +30,7 @@ end)
 
 local config = {
   enable_wayland = my_wayland_enable,
-  default_prog = { '/usr/bin/zsh', '-l' },
+  default_prog = { 'zsh', '-l' },
   color_schemes = { ['My Dracula'] = my_dracula },
   font_size = 11,
   font = wezterm.font 'Roboto Mono',

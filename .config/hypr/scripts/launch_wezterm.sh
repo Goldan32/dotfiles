@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CWD_FILE="$HOME/.cache/wezterm_cwd"
 WEZTERM_BIN="wezterm --config-file $HOME/.config/wezterm/wezterm-hyprland.lua"
