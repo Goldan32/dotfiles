@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 HYPR_CACHE="${HOME}/.cache/hypr"
 mkdir -p "$HYPR_CACHE"

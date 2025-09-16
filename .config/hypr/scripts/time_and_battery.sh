@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 
 # Get acpi output
 ACPI_OUTPUT=$(acpi 2>&1)

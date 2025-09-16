@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script handles volume changes and sends a notification to dunst.
 # To use: ./volume.sh up

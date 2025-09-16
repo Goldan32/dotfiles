@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 # Return the name of the config to be pulled
 
 HOSTNAME="$(hostname)"
