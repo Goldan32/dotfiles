@@ -4,7 +4,7 @@
     b = branch
     showfiles = diff-tree --no-commit-id --name-only -r HEAD
     co = checkout
-    hash = "rev-list --max-count=1 --skip=# HEAD"
+    hash = rev-parse HEAD
     amend = commit --amend --no-edit
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
     bs = branch --show-current
