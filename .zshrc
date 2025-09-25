@@ -41,6 +41,7 @@ alias cd='z'
 
 # Defaults
 export EDITOR="nvim"
+export KERNEL_VERSION="$(uname -r)"
 
 # Try to fix wayland on home-pc
 export LIBVA_DRIVER_NAME=nvidia
@@ -56,8 +57,6 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias lock='hyprlock'
-alias msub='mosquitto_sub'
-alias mpub='mosquitto_pub'
 alias cb='wl-copy'
 alias fd='fdfind'
 alias v='nvim'
