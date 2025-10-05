@@ -1,10 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-[ -d "$HOME/.wallpaper" ] || exit 0
+if [ ! -d "$HOME/.wallpaper" ]; then
+    echo "No ~/.wallpaper directory"
+    exit 0
+fi
 
-[ -n "$( ls -A "$HOME/.wallpaper" )" ] || exit 0
+if [ ! -n "$( ls -A "$HOME/.wallpaper" )" ]; then
+    echo "~/.wallpaper is empty"
+    exit 0
+fi
 
 WPP="$HOME/.wallpaper/$(ls -t "$HOME/.wallpaper" | head -n 1)"
 
 swaybg -i "$WPP" -m fill
+
+exit 1
 
