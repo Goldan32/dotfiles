@@ -55,7 +55,7 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias lock='hyprlock'
-alias cb='wl-copy'
+alias cb='wl-copy --trim-newline'
 alias fd='fdfind'
 alias v='nvim'
 if command -v bat &> /dev/null; then
@@ -119,4 +119,3 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
 PROMPT='%F{blue}%T%f %F{#D1FFBD}%n%f@${PROMPT_M} %B%F{cyan}%~%f%b %F{#FFA500}${vcs_info_msg_0_}%f${NEWLINE}%B%F{green}❯%f%b '
-
