@@ -38,6 +38,7 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.git-blame',
   --  require 'plugins.leap',
+  require 'plugins.obsidian',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
