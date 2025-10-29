@@ -103,7 +103,7 @@
     background = "#f6f1e7"
     foreground = "#000000"
     highlight = "#000000, #f6f1e7"
-    timeout = 20
+    timeout = 10
     frame_color = "#000000"
 
 
@@ -112,7 +112,7 @@
     foreground = "#000000"
     frame_color = "#000000"
     highlight = "#000000, #f6f1e7"
-    timeout = 20
+    timeout = 0
     override_pause_level = 30
     default_icon = dialog-information
 
