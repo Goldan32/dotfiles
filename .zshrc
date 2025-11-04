@@ -96,8 +96,6 @@ bindkey -M vicmd "j" history-beginning-search-forward
 bindkey -r "^[c"
 zvm_bindkey vicmd 'a'  zvm_append_eol
 
-PROMPT_M='%m'
-
 MACHINE_ENV="${HOME}/.zsh/machines/${(L)$(cat /sys/class/dmi/id/product_family | cut -d ' ' -f 1)}.sh"
 if [ -f ${MACHINE_ENV} ]; then
     . ${MACHINE_ENV}
@@ -108,11 +106,13 @@ if [ -f ${UNTRACKED_ENV} ]; then
     . ${UNTRACKED_ENV}
 fi
 
+# Prompt
+PCOLOR=${PCOLOR:-'#FF0000'}
+PROMPT_M='%F'{"${PCOLOR}"'}%m%f'
 if [[ -v ZELLIJ ]]; then
     PROMPT_M="🟩🟩🟩${PROMPT_M}🟩🟩🟩"
 fi
 
-# Prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
