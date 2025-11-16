@@ -44,6 +44,7 @@ alias lock='hyprlock'
 alias cb='wl-copy --trim-newline'
 alias v='nvim'
 alias f='fzf'
+alias open='xdg-open'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
