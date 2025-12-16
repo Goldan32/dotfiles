@@ -6,9 +6,9 @@ mkdir -p "$HYPR_CACHE"
 STATE="$HYPR_CACHE/laptop_monitor_state"
 
 turn_off() {
-    if [[ "$(hyprctl -j monitors show | jq 'length')" == 1 ]] && [[ "$(hyprctl -j monitors show | jq '.[0].name')" == "\"eDP-1\"" ]]; then
-        exit 0
-    fi
+    # if [[ "$(hyprctl -j monitors show | jq 'length')" == 1 ]] && [[ "$(hyprctl -j monitors show | jq '.[0].name')" == "\"eDP-1\"" ]]; then
+    #     exit 0
+    # fi
     hyprctl keyword monitor "eDP-1, disabled"
     echo 0 > "$STATE"
 }
