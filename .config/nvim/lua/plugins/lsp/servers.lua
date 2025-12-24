@@ -1,8 +1,27 @@
 return {
   bashls = {},
-  shellcheck = {},
   pyright = {},
-  rust_analyzer = {},
+  rust_analyzer = {
+    cmd = { 'rust-analyzer' },
+    settings = {
+      ['rust-analyzer'] = {
+        imports = {
+          granularity = {
+            group = 'module',
+          },
+          prefix = 'self',
+        },
+        cargo = {
+          buildScripts = {
+            enable = true,
+          },
+        },
+        procMacro = {
+          enable = true,
+        },
+      },
+    },
+  },
   ts_ls = {},
   clangd = {
     cmd = {
