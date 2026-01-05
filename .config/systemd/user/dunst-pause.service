@@ -1,0 +1,6 @@
+[Unit]
+Description=Pause dunst notifications
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/dunstctl set-paused true
