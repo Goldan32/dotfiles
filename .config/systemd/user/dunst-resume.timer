@@ -1,0 +1,15 @@
+[Unit]
+Description=Resume dunst on schedule
+
+[Timer]
+# Mon/Wed/Fri resume at 15:00
+OnCalendar=Mon,Wed,Fri 15:00
+
+# Tue/Thu resume at 11:00
+OnCalendar=Tue,Thu 11:00
+
+Persistent=true
+Unit=dunst-resume.service
+
+[Install]
+WantedBy=timers.target
