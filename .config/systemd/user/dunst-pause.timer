@@ -1,0 +1,15 @@
+[Unit]
+Description=Pause dunst on schedule
+
+[Timer]
+# Mon/Wed/Fri pause at 13:00
+OnCalendar=Mon,Wed,Fri 13:00
+
+# Tue/Thu pause at 09:00
+OnCalendar=Tue,Thu 09:00
+
+Persistent=true
+Unit=dunst-pause.service
+
+[Install]
+WantedBy=timers.target
