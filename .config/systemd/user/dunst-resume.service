@@ -1,0 +1,7 @@
+[Unit]
+Description=Resume dunst notifications
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/dunstctl set-paused false
+
