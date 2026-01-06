@@ -76,7 +76,7 @@
     title = Dunst
     class = Dunst
 
-    corner_radius = 10
+    corner_radius = 4
     corners = bottom, top-left
     ignore_dbusclose = false
 
