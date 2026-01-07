@@ -26,8 +26,8 @@ return {
         hl[group] = { bg = c.bg }
       end
 
-      hl.NeoTreeDirectoryName = { fg = '#c3b6e3' }
-      hl.NeoTreeDirectoryIcon = { fg = '#c3b6e3' }
+      hl.NeoTreeDirectoryName = { fg = c.purple }
+      hl.NeoTreeDirectoryIcon = { fg = c.purple }
       hl.NeoTreeStatusLine = { fg = c.fg }
       hl.NeoTreeRootName = { fg = c.fg, bold = true, italic = true }
       hl.NeoTreeFileName = { fg = c.fg }
