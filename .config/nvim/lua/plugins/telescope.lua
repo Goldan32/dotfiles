@@ -26,15 +26,32 @@ return {
   config = function()
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.setup()`
+    local actions = require 'telescope.actions'
+    local action_state = require 'telescope.actions.state'
+
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       --
-      -- defaults = {
-      --   mappings = {
-      --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-      --   },
-      -- },
+
+      defaults = {
+        mappings = {
+          i = {
+            ['<C-y>'] = function(prompt_bufnr)
+              local selection = action_state.get_selected_entry()
+              actions.close(prompt_bufnr)
+              vim.cmd('tabedit ' .. selection.path)
+            end,
+          },
+          n = {
+            ['<C-y>'] = function(prompt_bufnr)
+              local selection = action_state.get_selected_entry()
+              actions.close(prompt_bufnr)
+              vim.cmd('tabedit ' .. selection.path)
+            end,
+          },
+        },
+      },
       pickers = {
         find_files = {
           hidden = true,
@@ -90,4 +107,3 @@ return {
     end, { desc = '[S]earch [N]eovim files' })
   end,
 }
-
