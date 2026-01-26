@@ -27,7 +27,8 @@ require('lazy').setup({
   require 'plugins.lint',
   require 'plugins.lsp',
   require 'plugins.neo-tree',
-  require 'plugins.small-plugins',
+  -- require 'plugins.small-plugins',
+  require 'plugins.lualine',
   require 'plugins.tabstop',
   require 'plugins.telescope',
   require 'plugins.theme-tokyonight',
@@ -36,7 +37,7 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.git-blame',
-  require 'plugins.leap',
+  --  require 'plugins.leap',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

@@ -3,6 +3,7 @@ return {
   lazy = false,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   opts = {
+    lualine = false,
     on_colors = function(colors)
       colors.bg = '#202020'
       colors.fg_dark = '#777777'
