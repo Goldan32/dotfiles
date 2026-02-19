@@ -33,7 +33,7 @@ local config = {
   default_prog = { 'zsh', '-l' },
   color_schemes = { ['My Dracula'] = my_dracula },
   font_size = 11,
-  font = wezterm.font 'Roboto Mono',
+  font = wezterm.font 'RobotoMono Nerd Font',
   color_scheme = 'My Dracula',
   tab_bar_at_bottom = true,
   keys = {
