@@ -94,6 +94,14 @@ tooltip label {
   color: @foreground;
 }
 
+#custom-poweroff,
+#custom-restart,
+#custom-hyprlock {
+  border-radius: 4px;
+  margin: 2px 2px 4px 2px;
+  color: @foreground;
+}
+
 #custom-notifications {
   padding-left: 4px;
 }
