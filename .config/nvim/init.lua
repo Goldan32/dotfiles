@@ -27,7 +27,7 @@ require('lazy').setup({
   require 'plugins.lint',
   require 'plugins.lsp',
   require 'plugins.neo-tree',
-  -- require 'plugins.small-plugins',
+  require 'plugins.mini',
   require 'plugins.lualine',
   require 'plugins.tabstop',
   require 'plugins.telescope',
