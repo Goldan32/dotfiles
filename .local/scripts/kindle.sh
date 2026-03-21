@@ -2,7 +2,7 @@
 
 KINDLE_DIR="$HOME/.local/kindle"
 
-if [ $1 -ne 1 ]; then
+if [ $# -ne 1 ]; then
     echo "kindle.sh <attach|detach>"
     exit 1;
 fi
