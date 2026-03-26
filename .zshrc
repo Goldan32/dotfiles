@@ -61,8 +61,8 @@ alias v='nvim'
 alias f='fzf'
 alias gitnorm='git -c core.pager=""'
 if command -v bat &> /dev/null; then
-    alias cat="bat -pp --theme Material-Darker"
-    alias less="bat -p --theme Material-Darker"
+    alias cat="bat -pp --theme tokyonight_night"
+    alias less="bat -p --theme tokyonight_night"
 fi
 
 # Functions
