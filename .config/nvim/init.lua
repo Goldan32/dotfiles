@@ -21,7 +21,7 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.comment',
   require 'plugins.cutlass',
-  require 'plugins.debug',
+  -- require 'plugins.debug',
   require 'plugins.gitsigns',
   require 'plugins.indent-line',
   require 'plugins.lint',
@@ -38,6 +38,7 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.git-blame',
+  require 'plugins.debug-view',
   --  require 'plugins.leap',
 }, {
   ui = {
