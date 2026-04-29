@@ -10,6 +10,7 @@
     bs = branch --show-current
     difffiles = diff --name-only
     untracked = ls-files --others --exclude-standard
+    cam = commit -am
     s = status --short --branch
     chp = cherry-pick
     wt = worktree
