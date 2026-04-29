@@ -35,6 +35,9 @@ return {
       --
 
       defaults = {
+        preview = {
+          treesitter = false,
+        },
         mappings = {
           i = {
             ['<C-y>'] = function(prompt_bufnr)
