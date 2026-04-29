@@ -3,7 +3,7 @@
 
 return {
   'nvim-neo-tree/neo-tree.nvim',
-  version = '*',
+  branch = 'main',
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
@@ -15,6 +15,8 @@ return {
     { '<leader>w', ':Neotree toggle top<CR>' },
   },
   opts = {
+    -- Temporary workaround for nvim 0.13
+    enable_modified_markers = false,
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
