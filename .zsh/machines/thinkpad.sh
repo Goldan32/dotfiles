@@ -3,4 +3,4 @@ trustssh() {
     ssh "$1"
 }
 
-export LSP_SOURCE="corpo"
+# export LSP_SOURCE="corpo"
