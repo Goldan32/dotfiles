@@ -25,6 +25,7 @@ return {
       'json',
       'css',
       'gitcommit',
+      'rust',
     }
 
     for _, parser in ipairs(parsers) do
