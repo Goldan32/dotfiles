@@ -14,6 +14,7 @@
     s = status --short --branch
     chp = cherry-pick
     wt = worktree
+    difflog = range-diff -p @{u}...HEAD
     logfile = log --pretty=\"format:%C(yellow)%H%C(reset) - %C(green)%an%C(reset) - %C(cyan)(%as)%C(reset) - %C(blue)%s%C(reset)\" --name-only
 [core]
     editor = ~/.local/share/bob/nvim-bin/nvim
