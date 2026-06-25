@@ -35,6 +35,7 @@ return {
       --
 
       defaults = {
+        layout_strategy = 'vertical',
         mappings = {
           i = {
             ['<C-y>'] = function(prompt_bufnr)
