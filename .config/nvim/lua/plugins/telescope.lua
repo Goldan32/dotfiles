@@ -35,6 +35,7 @@ return {
       --
 
       defaults = {
+        layout_strategy = 'vertical',
         preview = {
           treesitter = false,
         },
