@@ -42,8 +42,19 @@ return {
         -- Actions
         -- visual mode
         -- Toggles
-        map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
         map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
+
+        -- normal mode: stage current hunk
+        map('n', '<leader>ta', gitsigns.stage_hunk, { desc = 'Git [a]dd hunk' })
+
+        -- visual mode: stage selected lines
+        map('v', '<leader>ta', function()
+          gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
+        end, { desc = 'Git [a]dd selected lines' })
+
+        map('v', '<leader>tr', function()
+          gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
+        end, { desc = 'Git [r]eset selected lines' })
       end,
     },
   },
