@@ -36,9 +36,6 @@ return {
 
       defaults = {
         layout_strategy = 'vertical',
-        preview = {
-          treesitter = false,
-        },
         mappings = {
           i = {
             ['<C-y>'] = function(prompt_bufnr)
