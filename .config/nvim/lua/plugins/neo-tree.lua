@@ -16,7 +16,7 @@ return {
   },
   opts = {
     -- Temporary workaround for nvim 0.13
-    enable_modified_markers = false,
+    enable_modified_markers = true,
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
