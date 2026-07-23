@@ -42,7 +42,7 @@ return {
         -- Actions
         -- visual mode
         -- Toggles
-        map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
+        map('n', '<leader>td', gitsigns.toggle_deleted, { desc = '[t]oggle git show [d]eleted' })
 
         -- normal mode: stage current hunk
         map('n', '<leader>ta', gitsigns.stage_hunk, { desc = 'Git [a]dd hunk' })
