@@ -12,6 +12,7 @@ return {
     local parsers = {
       'bash',
       'c',
+      'cpp',
       'html',
       'lua',
       'luadoc',
