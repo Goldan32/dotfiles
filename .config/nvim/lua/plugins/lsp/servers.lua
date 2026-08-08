@@ -26,8 +26,8 @@ return {
   clangd = {
     cmd = {
       'clangd',
-      '--header-insert=never',
-      '-j4',
+      '--header-insertion=never',
+      '-j=4',
       '--completion-style=detailed',
       '--function-arg-placeholders',
       '--rename-file-limit=0',
