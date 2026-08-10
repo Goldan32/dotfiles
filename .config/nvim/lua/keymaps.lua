@@ -36,3 +36,11 @@ vim.keymap.set('n', '<leader>h', '<C-w><C-h>', { desc = 'Move focus to the left 
 vim.keymap.set('n', '<leader>l', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<leader>j', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<leader>k', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.api.nvim_create_user_command('W', function()
+  vim.b.disable_autoformat = true
+  vim.cmd.write()
+  vim.b.disable_autoformat = false
+end, {
+  desc = 'Save without formatting',
+})
