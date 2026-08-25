@@ -8,7 +8,7 @@ setopt hist_ignore_dups
 source ~/.zsh/scripts/plugin_utils.sh
 load_plugin zsh-autosuggestions
 load_plugin zsh-syntax-highlighting
-load_plugin --user jeffreytse --hash f01ced38ba12e1d2098bb96b64a20cfe30dd622b --patch zsh-vi-mode
+load_plugin --user jeffreytse zsh-vi-mode
 
 # Disable underline for syntax highlights
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
