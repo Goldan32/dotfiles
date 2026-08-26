@@ -32,6 +32,7 @@ require('lazy').setup({
   require 'plugins.tabstop',
   require 'plugins.telescope',
   require 'plugins.grug-far',
+  require 'plugins.numspect',
   require 'plugins.theme-tokyonight',
   -- require 'plugins.theme-other',
   require 'plugins.todo-comment',
