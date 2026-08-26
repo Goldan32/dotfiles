@@ -39,6 +39,8 @@ require('lazy').setup({
   require 'plugins.treesitter',
   require 'plugins.which-key',
   require 'plugins.git-blame',
+  require 'plugins.debug-view',
+  require 'plugins.bookmarks',
   --  require 'plugins.leap',
 }, {
   ui = {
