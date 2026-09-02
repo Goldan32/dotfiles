@@ -60,6 +60,8 @@ alias fd='fdfind'
 alias v='nvim'
 alias f='fzf'
 alias gitnorm='git -c core.pager=""'
+alias open='xdg-open'
+alias drag='ripdrag'
 if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
