@@ -19,3 +19,5 @@ exec_always --no-startup-id ~/.config/sway/scripts/fullscreen.sh
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+exec sh -c 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP && exec systemctl --user start kodi.service'
