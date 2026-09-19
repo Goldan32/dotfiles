@@ -1,6 +1,8 @@
 set $mod Mod4
 set $term wezterm
-set $menu rofi -show drun
+set $browser firefox
+set $jellyfin jellyfin-desktop
+set $menu rofi -theme ~/.config/rofi/giant-rofi.rasi -show drun
 
 input "type:keyboard" {
     xkb_layout us
@@ -8,11 +10,19 @@ input "type:keyboard" {
 
 input "type:touchpad" {
     tap enabled
-    natural_scroll enabled
+    natural_scroll disabled
 }
+
+input "type:mouse" {
+    natural_scroll disabled
+}
+
+output HDMI-A-1 mode 3840x2160@60Hz
 
 bindsym $mod+t exec $term
 bindsym $mod+r exec $menu
+bindsym $mod+b exec $browser
+bindsym $mod+m exec $jellyfin
 bindsym $mod+w kill
 
 exec_always --no-startup-id ~/.config/sway/scripts/fullscreen.sh
@@ -20,4 +30,4 @@ exec_always --no-startup-id ~/.config/sway/scripts/fullscreen.sh
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-exec sh -c 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP && exec systemctl --user start kodi.service'
+# exec sh -c 'systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP && exec systemctl --user start kodi.service'
