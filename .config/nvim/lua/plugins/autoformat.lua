@@ -35,6 +35,7 @@ return { -- Autoformat
       c = { 'clang_format' },
       h = { 'clang_format' },
       cpp = { 'clang_format' },
+      nix = { 'nixfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
