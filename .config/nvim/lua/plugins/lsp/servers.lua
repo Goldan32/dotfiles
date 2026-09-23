@@ -1,6 +1,20 @@
 return {
   bashls = {},
   pyright = {},
+  nil_ls = {
+    settings = {
+      ['nil'] = {
+        nix = {
+          flake = {
+            autoArchive = false,
+          },
+        },
+        formatting = {
+          command = { 'nixfmt' },
+        },
+      },
+    },
+  },
   rust_analyzer = {
     cmd = { 'rust-analyzer' },
     settings = {
