@@ -40,7 +40,7 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.git-blame',
   require 'plugins.debug-view',
-  require 'plugins.bookmarks',
+  -- require 'plugins.bookmarks',
   --  require 'plugins.leap',
   require 'plugins.obsidian',
 }, {
