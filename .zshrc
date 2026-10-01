@@ -66,6 +66,9 @@ if command -v bat &> /dev/null; then
     alias cat="bat -pp --theme Material-Darker"
     alias less="bat -p --theme Material-Darker"
 fi
+if [[ "$TERM" == "xterm-kitty" ]]; then
+    alias ssh="kitten ssh"
+fi
 
 # Functions
 logssh () { ssh $1 2>&1 | tee -a ~/.session_logs/$1.$(date '+%Y.%m.%d').log; }
