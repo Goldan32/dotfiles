@@ -2,7 +2,7 @@ set $mod Mod4
 set $term kitty
 set $browser firefox
 set $jellyfin jellyfin-desktop
-set $menu rofi -theme ~/.config/rofi/giant-rofi.rasi -show drun
+set $menu rofi -theme giant-rofi -show drun
 
 input "type:keyboard" {
     xkb_layout us
