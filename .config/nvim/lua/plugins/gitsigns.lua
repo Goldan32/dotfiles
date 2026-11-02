@@ -47,7 +47,10 @@ return {
         -- normal mode: stage current hunk
         map('n', '<leader>ta', gitsigns.stage_hunk, { desc = 'Git [a]dd hunk' })
 
-        -- visual mode: stage selected lines
+        map('n', '<leader>tr', function()
+          gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line '.' }
+        end, { desc = 'Git [r]eset line' })
+
         map('v', '<leader>ta', function()
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'Git [a]dd selected lines' })
