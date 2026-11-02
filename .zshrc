@@ -82,6 +82,17 @@ bflash () {
     rm "$1.bmap"
 }
 
+fm() {
+    if ! command -v nnn &> /dev/null; then
+        echo "No file manager installed"
+        return 1
+    fi
+    local tmp="$(mktemp)"
+    NNN_TMPFILE="$tmp" nnn "$@"
+    [ -s "$tmp" ] && . "$tmp"
+    rm -f "$tmp"
+}
+
 ff () { realpath "$(find ./ -iname $1)" }
 
 NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
