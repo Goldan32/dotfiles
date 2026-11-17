@@ -71,8 +71,6 @@ if [[ "$TERM" == "xterm-kitty" ]]; then
 fi
 
 # Functions
-logssh () { ssh $1 2>&1 | tee -a ~/.session_logs/$1.$(date '+%Y.%m.%d').log; }
-
 hg () { rg -N "$1" $HISTFILE }
 
 bflash () {
@@ -92,8 +90,6 @@ fm() {
     [ -s "$tmp" ] && . "$tmp"
     rm -f "$tmp"
 }
-
-ff () { realpath "$(find ./ -iname $1)" }
 
 NVIM_BIN="${HOME}/.local/share/bob/nvim-bin/nvim"
 nvim () {
