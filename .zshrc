@@ -114,11 +114,6 @@ bindkey -M vicmd "j" history-beginning-search-forward
 bindkey -r "^[c"
 zvm_bindkey vicmd 'a'  zvm_append_eol
 
-MACHINE_ENV="${HOME}/.zsh/machines/${(L)$(cat /sys/class/dmi/id/product_family | cut -d ' ' -f 1)}.sh"
-if [ -f ${MACHINE_ENV} ]; then
-    . ${MACHINE_ENV}
-fi
-
 UNTRACKED_ENV="${HOME}/.zsh/local/env.sh"
 if [ -f ${UNTRACKED_ENV} ]; then
     . ${UNTRACKED_ENV}
