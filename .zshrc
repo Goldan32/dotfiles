@@ -118,9 +118,6 @@ fi
 # Prompt
 PCOLOR=${PCOLOR:-'#FF0000'}
 PROMPT_M='%F'{"${PCOLOR}"'}%m%f'
-if [[ -v ZELLIJ ]]; then
-    PROMPT_M="🟩🟩🟩${PROMPT_M}🟩🟩🟩"
-fi
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
