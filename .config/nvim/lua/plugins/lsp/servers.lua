@@ -55,7 +55,8 @@ end
 
 return {
   bashls = {},
-  pyright = {},
+  ruff = {},
+  ty = {},
   nil_ls = {
     settings = {
       ['nil'] = {
